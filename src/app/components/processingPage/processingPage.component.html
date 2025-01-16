@@ -1,0 +1,86 @@
+
+
+<div class=" p-2 pt-4 pb-5 row justify-content-start position-reletive" >
+    <div class=" me-5  col-11 col-lg-5  ">
+        <div class="_container  mb-4 pb-4 w-100 " >
+            <div class=" d-flex justify-content-start  mb-2 me-4 pt-2 ">
+                <span style="height: 30px; width: 3px;" class="bg-primary rounded ">&nbsp;</span>
+                <span class="fs-5">&nbsp; Uplode Decuments</span>
+            </div>
+
+            <div class="upload-zone mt-2 "
+            (drop)="onFileDrop($event)"
+            (dragover)="onDragOperation($event)"
+            (dragleave)="onDragOperation($event)"
+            >
+            <label class="pb-4" >
+                <br /><br />
+                <img src="assets/Images/icons8-upload-64.png" alt="" width="70" height="50" class="d-inline-block align-text-top">
+            <br />
+            <b> Drag & drop files here</b>
+            <br />
+            <span style="color: rgb(161, 161, 161);">Support for PDF, PNG, JPG (up to 10MB)</span>
+            <br />
+            <img src="assets/Images/icons8-file-35.png" alt="" width="20" height="20" class="d-inline-block ">
+            <span style="color: rgb(161, 161, 161);"> Or click to browse  </span>
+            <input
+              type="file"
+              accept=".pdf, .png, .jpg"
+              (change)="onFileSelect($event)"
+              hidden
+            />
+           
+          </label>
+        </div>
+        </div>
+<!-- start processing container -->
+        <div class="_container  w-100  ">
+            <div class=" d-flex justify-content-start  mb-2 me-4 pt-2 ">
+                <span style="height: 30px; width: 3px;" class="bg-primary rounded ">&nbsp;</span>
+                <span class="fs-5">&nbsp; Processing Status</span>
+            </div>
+            <div class="d-flex justify-content-start me-5 p-4 pt-3 ">
+                    {{Processing_Status}}
+            </div>
+        </div>
+        
+    </div>
+   <!-- start extracted Data container -->
+    <div class="_container mt-4 mt-lg-0 me-5 me-lg-4  col-11  col-lg-6  ">
+      
+        <div class=" d-flex justify-content-between  mb-2 me-1 pt-2  row">
+            <div class="col-6  d-flex justify-content-start ">
+                <span style="height: 30px; width: 3px;" class="bg-primary rounded ">&nbsp;</span>
+                <span class="fs-5">&nbsp; Extracted Data </span>
+            </div>
+            <div class="col-5  d-flex justify-content-end  ">
+                 <button (click)="downloadTextFile()" type="button" class="btn btn-primary">
+                 <img src="assets/Images/icons8-download-30.png" alt="" width="20" height="20" class="d-inline-block ">
+                Export Results
+                 </button>
+            </div> 
+        </div>
+        
+        @if(isProcesSuccessful_){
+            <div class="d-flex justify-content-start me-5 p-3 pt-4 ">
+                {{extracted_Data}}
+        </div> 
+        }@else {
+            <div id="Notifing" class="d-flex justify-content-center me-5 p-3 pt-4 ">
+                <label >
+                    <br />
+                    <img src="assets/Images/icons8-file-70.png" alt="" width="70" height="50" class="d-inline-block align-text-top">
+                <br />
+                
+                <br />
+                <span style="color: rgb(161, 161, 161);" >Upload Decument to see the ectracted data</span>
+                </label>
+               
+             </div> 
+        }
+       
+      </div>
+
+</div>
+
+  

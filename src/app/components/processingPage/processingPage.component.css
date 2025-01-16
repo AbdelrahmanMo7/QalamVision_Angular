@@ -1,0 +1,40 @@
+
+
+._container {
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow:   1px 1px 1px 1px rgba(48, 48, 48, 0.1);
+    border-radius: 8px  ;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+  
+  .upload-zone {
+    display: inline-block;
+    width: 90%;
+    border: 2px dashed #6e6f70;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    color: #24272a;
+  }
+  
+  ._container:hover {
+   transform:scale(1.003);
+   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
+   -webkit-transform:scale(1.003);
+   -moz-transform:scale(1.003);
+   -ms-transform:scale(1.003);
+   -o-transform:scale(1.003);
+}
+
+  .upload-zone:hover {
+    background-color: #f7f7f7;
+    border: 2px dashed #0b8bed;
+  }
+  
+ 
+  
+  
