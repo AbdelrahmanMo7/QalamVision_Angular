@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './components/navBar/navBar.component';
 import { ProcessingPageComponent } from './components/processingPage/processingPage.component';
 
@@ -10,7 +10,8 @@ import { ProcessingPageComponent } from './components/processingPage/processingP
   [
     RouterOutlet,
     NavBarComponent,
-    ProcessingPageComponent
+    ProcessingPageComponent,
+    RouterModule
 
   ],
   templateUrl: './app.component.html',

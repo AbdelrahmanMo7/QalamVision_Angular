@@ -10,11 +10,15 @@ export class DecumentProcessing {
   constructor(private  DecumentProcessingClient :HttpClient) { }
  
   Process(file:File){
+   
 
-    const formData = new FormData();
-    formData.append('file', file, file.name);
 
-    return this.DecumentProcessingClient.post(this.db_URL, formData, { headers: { 'Content-Type': 'multipart/form-data' } });
+    return this.DecumentProcessingClient.post(this.db_URL, file);
+    
+    // const formData = new FormData();
+    // formData.append('file', file, file.name);
+
+    // return this.DecumentProcessingClient.post(this.db_URL, formData, { headers: { 'Content-Type': 'multipart/form-data' } });
   }
  
 
