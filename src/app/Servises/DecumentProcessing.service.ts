@@ -12,7 +12,7 @@ export class DecumentProcessing {
   Process(file:File){
 
     const formData = new FormData();
-formData.append('file', file, file.name);
+    formData.append('file', file, file.name);
 
     return this.DecumentProcessingClient.post(this.db_URL, formData, { headers: { 'Content-Type': 'multipart/form-data' } });
   }

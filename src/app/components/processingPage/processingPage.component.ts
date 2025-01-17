@@ -70,7 +70,7 @@ export class ProcessingPageComponent {
     types.forEach(type=>
       {
         if (selectedtype===type)
-          {alert(type+" + "+selectedtype);
+          {
             // If validation passes, proceed to upload
             let files=[file];
             this.uploadFile(file);
