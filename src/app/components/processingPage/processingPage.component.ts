@@ -100,7 +100,7 @@ export class ProcessingPageComponent {
         console.log(err);
         this.isProcesSuccessful_=false;
         this.Processing_Status = '.Error during upload';
-        alert(`Upload failed (Server Problem): ${err.message}`);
+        alert(`Upload failed (Server Problem): ${err.message.split("?doc_type=ocr&lang=auto:")[1]}`);
       }
     });
   
